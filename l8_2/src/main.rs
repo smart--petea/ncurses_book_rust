@@ -45,8 +45,10 @@ fn main() -> Result<(), &'static str> {
 }
 
 fn showhelp(help: &WINDOW) {
+    touchwin(*help);
     wrefresh(*help);
     getch();
 
+    touchwin(stdscr());
     refresh();
 }
